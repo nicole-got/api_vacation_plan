@@ -1,0 +1,219 @@
+{
+    "openapi": "3.0.0",
+    "info": {
+        "title": "Holiday Plan API",
+        "version": "0.1"
+    },
+    "paths": {
+        "/api/holiday-plan": {
+            "get": {
+                "tags": [
+                    "Holiday Plan"
+                ],
+                "summary": "Get all plans",
+                "description": "Get all plans",
+                "operationId": "d548345529a07f21c69f58492ad9f5e2",
+                "responses": {
+                    "200": {
+                        "description": "Success",
+                        "content": {
+                            "application/json": {}
+                        }
+                    }
+                }
+            },
+            "post": {
+                "tags": [
+                    "Holiday Plan"
+                ],
+                "summary": "Create plan",
+                "description": "Create plan",
+                "operationId": "4d28aca8ac05db0858cbc1bb0410f18a",
+                "requestBody": {
+                    "required": true,
+                    "content": {
+                        "application/json": {
+                            "schema": {
+                                "properties": {
+                                    "title": {
+                                        "description": "plan title",
+                                        "type": "string"
+                                    },
+                                    "description": {
+                                        "description": "plan description",
+                                        "type": "string"
+                                    },
+                                    "date": {
+                                        "description": "plan date",
+                                        "type": "string",
+                                        "format": "date"
+                                    },
+                                    "participants": {
+                                        "description": "plan participants",
+                                        "type": "string"
+                                    }
+                                },
+                                "type": "object"
+                            }
+                        }
+                    }
+                },
+                "responses": {
+                    "200": {
+                        "description": "Success",
+                        "content": {
+                            "application/json": {}
+                        }
+                    }
+                }
+            }
+        },
+        "/api/holiday-plan/{id}": {
+            "get": {
+                "tags": [
+                    "Holiday Plan"
+                ],
+                "summary": "Get specific plan",
+                "description": "Get specific plan",
+                "operationId": "d12b94a0a66b8089213ad70e034b0026",
+                "parameters": [
+                    {
+                        "name": "id",
+                        "in": "path",
+                        "description": "ID holiday plan",
+                        "required": true,
+                        "schema": {
+                            "type": "integer"
+                        }
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "Success",
+                        "content": {
+                            "application/json": {}
+                        }
+                    }
+                }
+            },
+            "put": {
+                "tags": [
+                    "Holiday Plan"
+                ],
+                "summary": "Update plan",
+                "description": "Create plan",
+                "operationId": "559a8a76794b914b3b378e0d24c83e0d",
+                "parameters": [
+                    {
+                        "name": "id",
+                        "in": "path",
+                        "description": "ID holiday plan",
+                        "required": true,
+                        "schema": {
+                            "type": "integer"
+                        }
+                    }
+                ],
+                "requestBody": {
+                    "required": true,
+                    "content": {
+                        "application/json": {
+                            "schema": {
+                                "properties": {
+                                    "title": {
+                                        "description": "plan title",
+                                        "type": "string"
+                                    },
+                                    "description": {
+                                        "description": "plan description",
+                                        "type": "string"
+                                    },
+                                    "date": {
+                                        "description": "plan date",
+                                        "type": "string",
+                                        "format": "date"
+                                    },
+                                    "participants": {
+                                        "description": "plan participants",
+                                        "type": "string"
+                                    }
+                                },
+                                "type": "object"
+                            }
+                        }
+                    }
+                },
+                "responses": {
+                    "200": {
+                        "description": "Success",
+                        "content": {
+                            "application/json": {}
+                        }
+                    }
+                }
+            },
+            "delete": {
+                "tags": [
+                    "Holiday Plan"
+                ],
+                "summary": "Delete specific plan",
+                "description": "Delete specific plan",
+                "operationId": "adae9ae07ade19b397af991b65f31eae",
+                "parameters": [
+                    {
+                        "name": "id",
+                        "in": "path",
+                        "description": "ID holiday plan",
+                        "required": true,
+                        "schema": {
+                            "type": "integer"
+                        }
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "Success",
+                        "content": {
+                            "application/json": {}
+                        }
+                    }
+                }
+            }
+        },
+        "/api/holiday-plan/{id}/pdf": {
+            "get": {
+                "tags": [
+                    "Holiday Plan"
+                ],
+                "summary": "Export informations about specific plan",
+                "description": "Export informations about specific plan",
+                "operationId": "8cf1f3177bfa1f56123c1e483853a25c",
+                "parameters": [
+                    {
+                        "name": "id",
+                        "in": "path",
+                        "description": "ID holiday plan",
+                        "required": true,
+                        "schema": {
+                            "type": "integer"
+                        }
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "Success",
+                        "content": {
+                            "application/json": {}
+                        }
+                    }
+                }
+            }
+        }
+    },
+    "tags": [
+        {
+            "name": "Holiday Plan",
+            "description": "Holiday Plan"
+        }
+    ]
+}
