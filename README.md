@@ -20,7 +20,7 @@ Update the variables:<br>
     php artisan test
 
 ## Start the api
-    php artisan serve<br>
+    php artisan serve
 
 ## Documentation
     http://localhost:8000/api/documentation#/
